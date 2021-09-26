@@ -1,105 +1,125 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ohmyfood! - Le délice des sens</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="public/css/menus.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/17d71091f0.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ohmyfood - Le délice des sens</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="public/css/menus.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/17d71091f0.js" crossorigin="anonymous"></script>
+    </head>
 
-<body>
-    <header class="header">
-        <a href="index.html"><i class="header__retour fa-solid fa-arrow-left"></i></a>
-        <h1 class="header__logo"><img src="public/img/logo/ohmyfood.png" alt="Logo Ohmyfood!"></h1>
-    </header>
+    <body>
+        <header class="header">
+            <a href="index.html">
+                <i class="header__retour fa-solid fa-arrow-left"></i>
+            </a>
+            <h1 class="header__logo">
+                <img src="public/img/logo/ohmyfood.png" alt="Logo Ohmyfood">
+            </h1>
+        </header>
 
-    <main>
-        <section class="photo__resto">
-            <img src="public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo du restaurant Le délice des sens">
-        </section>
+        <main>
+            <section class="photo__resto">
+                <img src="public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo du restaurant Le délice des sens">
+            </section>
 
-        <section class="carte">
-            <h2 class="carte__nom">Le délice des sens</h2>
-            <i class="carte__like fa-solid fa-heart"></i>
-            <article class="carte__section">
-                <h3 class="section__titre">Entrées</h3>
-                <div class="section__plat">
-                    <h4 class="section__plat__titre">Tartare de thon</h4>
-                    <p class="section__plat__description">Assaisonné au yuzu</p>
-                    <span class="section__plat__prix">25€</span>
-                    <i class="section__plat__valide fa-solid fa-circle-check"></i>
+            <section class="carte">
+                <h2 class="carte__nom">Le délice des sens</h2>
+                <i class="carte__like fa-solid fa-heart"></i>
+                <div class="carte__section">
+                    <h3 class="section__titre">Entrées</h3>
+                    <div class="section__plat">
+                        <h4 class="section__plat__titre">Tartare de thon</h4>
+                        <p class="section__plat__description">Assaisonné au yuzu</p>
+                        <span class="section__plat__prix">25€</span>
+                        <i class="section__plat__valide fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="section__plat">
+                        <h4 class="section__plat__titre">Bouchée de homard croustillant</h4>
+                        <p class="section__plat__description">Et sa farandole de petits légumes</p>
+                        <span class="section__plat__prix">35€</span>
+                        <i class="section__plat__valide fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="section__plat">
+                        <h4 class="section__plat__titre">Velouté de cèpes</h4>
+                        <p class="section__plat__description">Aux truffes</p>
+                        <span class="section__plat__prix">20€</span>
+                        <i class="section__plat__valide fa-solid fa-circle-check"></i>
+                    </div>
                 </div>
-                <div class="section__plat">
-                    <h4 class="section__plat__titre">Bouchée de homard croustillant</h4>
-                    <p class="section__plat__description">Et sa farandole de petits légumes</p>
-                    <span class="section__plat__prix">35€</span>
-                    <i class="section__plat__valide fa-solid fa-circle-check"></i>
+                <div class="carte__section">
+                    <h3 class="section__titre">Plats</h3>
+                    <div class="section__plat">
+                        <h4 class="section__plat__titre">Poulet rôti aux herbes de Provence</h4>
+                        <p class="section__plat__description">Et sa crème de truffe</p>
+                        <span class="section__plat__prix">40€</span>
+                        <i class="section__plat__valide fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="section__plat">
+                        <h4 class="section__plat__titre">Langouste rôtie</h4>
+                        <p class="section__plat__description">Et ses légumes de saison</p>
+                        <span class="section__plat__prix">35€</span>
+                        <i class="section__plat__valide fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="section__plat">
+                        <h4 class="section__plat__titre">Côte de boeuf Angus</h4>
+                        <p class="section__plat__description">Et sa purée de panais</p>
+                        <span class="section__plat__prix">44€</span>
+                        <i class="section__plat__valide fa-solid fa-circle-check"></i>
+                    </div>
                 </div>
-                <div class="section__plat">
-                    <h4 class="section__plat__titre">Velouté de cèpes</h4>
-                    <p class="section__plat__description">Aux truffes</p>
-                    <span class="section__plat__prix">20€</span>
-                    <i class="section__plat__valide fa-solid fa-circle-check"></i>
+                <div class="carte__section">
+                    <h3 class="section__titre">Desserts</h3>
+                    <div class="section__plat">
+                        <h4 class="section__plat__titre">Farandole de desserts</h4>
+                        <p class="section__plat__description">Du chef</p>
+                        <span class="section__plat__prix">18€</span>
+                        <i class="section__plat__valide fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="section__plat">
+                        <h4 class="section__plat__titre">Crème brulée</h4>
+                        <p class="section__plat__description">Revisitée</p>
+                        <span class="section__plat__prix">22€</span>
+                        <i class="section__plat__valide fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="section__plat">
+                        <h4 class="section__plat__titre">Tiramisu</h4>
+                        <p class="section__plat__description">À la noisette</p>
+                        <span class="section__plat__prix">23€</span>
+                        <i class="section__plat__valide fa-solid fa-circle-check"></i>
+                    </div>
                 </div>
-            </article>
-            <article class="carte__section">
-                <h3 class="section__titre">Plats</h3>
-                <div class="section__plat">
-                    <h4 class="section__plat__titre">Poulet rôti aux herbes de Provence</h4>
-                    <p class="section__plat__description">Et sa crème de truffe</p>
-                    <span class="section__plat__prix">40€</span>
-                    <i class="section__plat__valide fa-solid fa-circle-check"></i>
-                </div>
-                <div class="section__plat">
-                    <h4 class="section__plat__titre">Langouste rôtie</h4>
-                    <p class="section__plat__description">Et ses légumes de saison</p>
-                    <span class="section__plat__prix">35€</span>
-                    <i class="section__plat__valide fa-solid fa-circle-check"></i>
-                </div>
+                <div class="carte__bouton">Commander</div>
+            </section>
+        </main>
 
-                <div class="section__plat">
-                    <h4 class="section__plat__titre">Côte de boeuf Angus</h4>
-                    <p class="section__plat__description">Et sa purée de panais</p>
-                    <span class="section__plat__prix">44€</span>
-                    <i class="section__plat__valide fa-solid fa-circle-check"></i>
-                </div>
-            </article>
-            <article class="carte__section">
-                <h3 class="section__titre">Desserts</h3>
-                <div class="section__plat">
-                    <h4 class="section__plat__titre">Farandole de desserts</h4>
-                    <p class="section__plat__description">Du chef</p>
-                    <span class="section__plat__prix">18€</span>
-                    <i class="section__plat__valide fa-solid fa-circle-check"></i>
-                </div>
-                <div class="section__plat">
-                    <h4 class="section__plat__titre">Crème brulée</h4>
-                    <p class="section__plat__description">Revisitée</p>
-                    <span class="section__plat__prix">22€</span>
-                    <i class="section__plat__valide fa-solid fa-circle-check"></i>
-                </div>
-                <div class="section__plat">
-                    <h4 class="section__plat__titre">Tiramisu</h4>
-                    <p class="section__plat__description">À la noisette</p>
-                    <span class="section__plat__prix">23€</span>
-                    <i class="section__plat__valide fa-solid fa-circle-check"></i>
-                </div>
-            </article>
-            <div class="carte__bouton">Commander</div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer__logo"></div>
-        <ul class="footer__list">
-            <li><a href="#"><i class="footer__list--picto1 fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-            <li><a href="#"><i class="footer__list--picto2 fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
-            <li><a href="#">Mention légales</a></li>
-            <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
-        </ul>
-    </footer>
-</body>
+        <footer class="footer">
+            <span class="footer__logo">ohmyfood</span>
+            <nav>
+                <ul class="footer__list">
+                    <li>
+                        <a href="#">
+                            <i class="footer__list--picto1 fa-solid fa-utensils"></i>
+                            Proposer un restaurant
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="footer__list--picto2 fa-solid fa-handshake-angle"></i>
+                            Devenir partenaire
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Mention légales</a>
+                    </li>
+                    <li>
+                        <a href="mailto:contact@ohmyfood.com">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>

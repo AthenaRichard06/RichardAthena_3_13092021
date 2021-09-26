@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+body, html {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 78px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+.header__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px;
+}
+
+.localisation {
+  width: 100%;
+  height: 64px;
+  background-color: #eaeaea;
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+}
+.localisation a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: black;
+  padding: 21px 0;
+}
+.localisation a i {
+  margin-right: 18px;
+}
+
+.exploration {
+  width: 100%;
+  height: 213px;
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 32px 0;
+}
+.exploration__titre {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 22px;
+}
+.exploration__description {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 31px;
+}
+.exploration__bouton {
+  color: white;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 25px;
+  padding: 16px 22px;
+  font-weight: 500;
+  bottom: 0;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+.exploration__bouton:hover {
+  cursor: pointer;
+}
+
+.fonctionnement {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 0;
+}
+.fonctionnement__titre {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 33px;
+  padding-left: 16px;
+}
+.fonctionnement__etapes {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  height: 74px;
+  width: 85.87%;
+  background: #f6f6f6;
+  border-radius: 22px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.fonctionnement__etapes__num {
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  background: #9356DC;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -12px;
+}
+.fonctionnement__etapes__picto {
+  margin-left: 33px;
+  margin-right: 27px;
+  color: #7e7e7e;
+}
+.fonctionnement__etapes:hover {
+  background: #f5edff;
+}
+.fonctionnement__etapes:hover i {
+  color: #9356DC;
+}
+
+.footer {
+  width: 100%;
+  height: 197px;
+  background-color: #353535;
+  padding-left: 6.4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.footer__list {
+  font-size: 16px;
+}
+.footer__list--picto {
+  padding-right: 5px;
+  width: 18px;
+}
+.footer__list li {
+  margin-bottom: 8px;
+}
+.footer a {
+  color: white;
+}
+.footer a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=main.css.map */
