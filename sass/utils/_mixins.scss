@@ -1,5 +1,5 @@
-@mixin taille($height) {
-    width: $width-max;
+@mixin taille($width, $height) {
+    width: $width;
     height: $height;
 }
 

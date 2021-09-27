@@ -15,7 +15,6 @@ body, html {
 }
 
 .header {
-  width: 100%;
   height: 78px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
   position: relative;
@@ -30,7 +29,6 @@ body, html {
 }
 
 .localisation {
-  width: 100%;
   height: 64px;
   background-color: #eaeaea;
   font-weight: 500;
@@ -49,7 +47,6 @@ body, html {
 }
 
 .exploration {
-  width: 100%;
   height: 213px;
   background-color: #f6f6f6;
   text-align: center;
@@ -79,17 +76,15 @@ body, html {
 }
 
 .fonctionnement {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 32px 0;
+  padding: 32px 0 32px 6.24%;
 }
 .fonctionnement__titre {
   font-size: 24px;
   font-weight: 900;
   margin-bottom: 33px;
-  padding-left: 16px;
 }
 .fonctionnement__etapes {
   display: flex;
@@ -129,8 +124,77 @@ body, html {
   color: #9356DC;
 }
 
-.footer {
+.restaurants {
+  background: #f6f6f6;
+  padding-top: 58px;
+  padding-bottom: 46px;
+}
+.restaurants__titre {
+  font-size: 24px;
+  font-weight: 900;
+  padding-left: 6.24%;
+  margin-bottom: 27px;
+}
+.restaurants a {
+  color: black;
+}
+.restaurants__vignette {
+  width: 89.33%;
+  height: 251px;
+  background: white;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+  border-radius: 22px;
+  margin-bottom: 18px;
+}
+.restaurants__vignette__photo img {
+  height: 174px;
   width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  border-radius: 22px 22px 0 0;
+}
+.restaurants__vignette__nom {
+  position: absolute;
+  bottom: 42px;
+  left: 18px;
+  font-weight: 800;
+  font-size: 18px;
+}
+.restaurants__vignette__ville {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  font-weight: 300;
+  font-size: 16px;
+}
+.restaurants__vignette__like {
+  position: absolute;
+  bottom: 31px;
+  right: 24px;
+  font-size: larger;
+}
+.restaurants__vignette__encadre {
+  background-color: #99E2D0;
+  position: absolute;
+  top: 13px;
+  right: 11px;
+  width: 80px;
+  height: 29px;
+  color: #008766;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
   height: 197px;
   background-color: #353535;
   padding-left: 6.4%;
@@ -160,6 +224,40 @@ body, html {
 .footer a:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+@media screen and (min-width: 769px) {
+  .fonctionnement__vignette {
+    display: flex;
+    flex-direction: row;
+  }
+  .fonctionnement__etapes {
+    width: 30%;
+  }
+
+  .restaurants__bloc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  .restaurants__vignette {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .fonctionnement, .restaurants__titre, .restaurants__bloc {
+    width: 1300px;
+  }
+
+  .fonctionnement, .restaurants__titre {
+    padding-left: 0;
+  }
+  .fonctionnement__bloc, .restaurants__titre__bloc {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
