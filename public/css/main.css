@@ -31,8 +31,8 @@ body, html {
 .localisation {
   height: 64px;
   background-color: #eaeaea;
-  font-weight: 500;
   font-size: 18px;
+  font-weight: 500;
   position: relative;
 }
 .localisation a {
@@ -47,32 +47,36 @@ body, html {
 }
 
 .exploration {
-  height: 213px;
   background-color: #f6f6f6;
   text-align: center;
-  padding: 32px 0;
 }
 .exploration__titre {
   font-size: 24px;
   font-weight: 900;
   margin-bottom: 22px;
+  padding-top: 32px;
 }
 .exploration__description {
   font-size: 18px;
   font-weight: 300;
-  margin-bottom: 31px;
+  margin-bottom: 35px;
 }
 .exploration__bouton {
   color: white;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-color: #282828;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   border-radius: 25px;
   padding: 16px 22px;
+  font-size: 16px;
   font-weight: 500;
-  bottom: 0;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  margin-bottom: 57px;
 }
 .exploration__bouton:hover {
   cursor: pointer;
+  background-blend-mode: screen;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  transition: 0.1s;
 }
 
 .fonctionnement {
@@ -90,8 +94,8 @@ body, html {
   display: flex;
   align-items: center;
   margin: auto;
-  height: 74px;
   width: 85.87%;
+  height: 74px;
   background: #f6f6f6;
   border-radius: 22px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
@@ -107,18 +111,28 @@ body, html {
   text-align: center;
   color: white;
   display: flex;
+  flex-direction: initial;
   justify-content: center;
   align-items: center;
   position: absolute;
   left: -12px;
+  font-size: 16px;
+  font-weight: 500;
 }
 .fonctionnement__etapes__picto {
   margin-left: 33px;
   margin-right: 27px;
   color: #7e7e7e;
 }
+.fonctionnement__etapes__texte {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 27px;
+}
 .fonctionnement__etapes:hover {
   background: #f5edff;
+  cursor: pointer;
+  transition: 0.1s;
 }
 .fonctionnement__etapes:hover i {
   color: #9356DC;
@@ -152,8 +166,8 @@ body, html {
   margin-bottom: 18px;
 }
 .restaurants__vignette__photo img {
-  height: 174px;
   width: 100%;
+  height: 174px;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -163,15 +177,15 @@ body, html {
   position: absolute;
   bottom: 42px;
   left: 18px;
-  font-weight: 800;
   font-size: 18px;
+  font-weight: 800;
 }
 .restaurants__vignette__ville {
   position: absolute;
   bottom: 18px;
   left: 18px;
-  font-weight: 300;
   font-size: 16px;
+  font-weight: 300;
 }
 .restaurants__vignette__like {
   position: absolute;
@@ -187,8 +201,8 @@ body, html {
   width: 80px;
   height: 29px;
   color: #008766;
-  font-weight: 500;
   font-size: 14px;
+  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,7 +211,7 @@ body, html {
 .footer {
   height: 197px;
   background-color: #353535;
-  padding-left: 6.4%;
+  padding-left: 6.24%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -207,9 +221,11 @@ body, html {
   font-family: "Shrikhand", cursive;
   margin-bottom: 20px;
   font-size: 18px;
+  font-weight: normal;
 }
 .footer__list {
   font-size: 16px;
+  font-weight: 400;
 }
 .footer__list--picto {
   padding-right: 5px;
@@ -230,6 +246,7 @@ body, html {
   .fonctionnement__vignette {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
   }
   .fonctionnement__etapes {
     width: 30%;
@@ -238,25 +255,43 @@ body, html {
   .restaurants__bloc {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    margin: auto;
   }
   .restaurants__vignette {
     width: 45%;
+    margin: inherit;
+    margin-bottom: 18px;
+    margin-right: 18px;
   }
 }
 @media screen and (min-width: 1300px) {
-  .fonctionnement, .restaurants__titre, .restaurants__bloc {
+  .fonctionnement {
+    padding-left: 0;
     width: 1300px;
+    margin: auto;
+  }
+  .fonctionnement__titre {
+    padding-left: 6.24%;
   }
 
-  .fonctionnement, .restaurants__titre {
+  .restaurants__partie {
+    width: 1300px;
+    margin: auto;
+  }
+
+  .footer {
     padding-left: 0;
   }
-  .fonctionnement__bloc, .restaurants__titre__bloc {
+  .footer__logo {
+    width: 1218.88px;
     margin: auto;
-    display: flex;
-    justify-content: center;
+    padding-left: 81.12px;
+  }
+  .footer__nav {
+    width: 1218.88px;
+    margin: auto;
+    padding-left: 81.12px;
   }
 }
 

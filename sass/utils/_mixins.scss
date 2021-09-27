@@ -3,29 +3,34 @@
     height: $height;
 }
 
-@mixin display($direction) {
+@mixin taille_et_marge($width, $margin) {
+    width: $width;
+    margin: $margin;
+}
+
+@mixin display($direction, $justif) {
     display: flex;
     flex-direction: $direction;
-    justify-content: center;
+    justify-content: $justif;
 }
 
 @mixin shadow($droite, $bas) {
     box-shadow: $droite $bas 8px rgba($color: #000000, $alpha: 0.25)
 }
 
-@mixin h2 {
-    font-size: 24px;
-    font-weight: 900;
+@mixin taille_texte($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
 }
 
 @mixin bouton {
     color: $couleur-texte;
-    background: $couleur-degrade;
+    background-color: #282828;
+    background-image: $couleur-degrade;
     border-radius: 25px;
     padding: 16px 22px;
-    font-weight: 500;
-    bottom: 0;
-    @include shadow(4px, 4px)
+    @include taille_texte(16px, 500);
+    @include shadow(4px, 4px);
 }
 
 @mixin numero {
@@ -35,9 +40,9 @@
     background: $couleur-primaire;
     text-align: center;
     color: $couleur-texte;
-    display: flex;
-    justify-content: center;
+    @include display(initial, center);
     align-items: center;
     position: absolute;
     left: -12px;
+    @include taille_texte(16px, 500);
 }
