@@ -99,37 +99,54 @@ body, html {
         }
     }
     &__plat {
-        @include display(column, center);
+        display: flex;
         @include taille(93.07%, 68px);
         @include shadow(0, 0);
         background: $couleur-texte;
         border-radius: 16px;
         margin: auto;
         margin-top: 12px;
-        position: relative;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        &__menu {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-left: 10px;
+        }
         &__titre {
             @include taille_texte(17px, 700);
-            position: absolute;
-            top: 16px;
-            margin-left: 10px;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         &__description {
             @include taille_texte(15px, 300);
-            position: absolute;
-            bottom: 12px;
-            margin-left: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         &__prix {
             @include taille_texte(16px, 700);
-            position: absolute;
-            bottom: 12px;
-            right: 22px;
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 12px;
+            margin-right: 23px;
+        }
+        &__picto {
+            @include taille(15.74%, 68px);
+            background: $couleur-tertiaire;
+            border-radius: 0 16px 16px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
         &__valide {
-            position: absolute;
-            right: 22px;
+            color: $couleur-texte;
+            font-size: x-large;
         }
         &:hover {
             cursor: pointer;
