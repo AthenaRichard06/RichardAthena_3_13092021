@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+body, html {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  height: 78px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+.header a {
+  color: black;
+}
+.header__retour {
+  font-size: large;
+  position: absolute;
+  top: 33px;
+  padding-left: 6.13%;
+}
+.header__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px;
+}
+
+.photo__resto {
+  max-height: 516px;
+}
+.photo__resto img {
+  width: 100%;
+  max-height: 516px;
+  object-fit: cover;
+}
+
+.carte {
+  background: #f6f6f6;
+  border-radius: 22px 22px 0 0;
+  position: relative;
+  margin-top: -22px;
+}
+.carte__nom {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Shrikhand", cursive;
+  padding-left: 5.07%;
+  padding-top: 20px;
+}
+.carte__like {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.carte__bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.carte__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+.carte__bouton {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding-bottom: 83px;
+}
+
+.bouton {
+  color: white;
+  background-color: #282828;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 25px;
+  padding: 16px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+.bouton:hover {
+  cursor: pointer;
+  background-blend-mode: screen;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.section__titre {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-left: 5.07%;
+  position: relative;
+  padding-bottom: 5px;
+}
+.section__titre::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  border-bottom: #99E2D0 solid 3px;
+  margin-left: 5.07%;
+}
+.section__plat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 93.07%;
+  height: 68px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  background: white;
+  border-radius: 16px;
+  margin: auto;
+  margin-top: 12px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.section__plat__titre {
+  font-size: 17px;
+  font-weight: 700;
+  position: absolute;
+  top: 16px;
+  margin-left: 10px;
+}
+.section__plat__description {
+  font-size: 15px;
+  font-weight: 300;
+  position: absolute;
+  bottom: 12px;
+  margin-left: 10px;
+}
+.section__plat__prix {
+  font-size: 16px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 12px;
+  right: 22px;
+}
+.section__plat__valide {
+  position: absolute;
+  right: 22px;
+}
+.section__plat:hover {
+  cursor: pointer;
+}
+
+.footer {
+  height: 197px;
+  background-color: #353535;
+  padding-left: 6.24%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.footer__list {
+  font-size: 16px;
+  font-weight: 400;
+}
+.footer__list__picto {
+  padding-right: 5px;
+  width: 18px;
+}
+.footer__list li {
+  margin-bottom: 8px;
+}
+.footer a {
+  color: white;
+}
+.footer a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1024px) {
+  .carte__bloc {
+    flex-direction: row;
+  }
+  .carte__section {
+    width: 30%;
+    display: unset;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .carte {
+    width: 1300px;
+    margin: auto;
+    margin-top: -22px;
+  }
+
+  .footer {
+    padding-left: 0;
+  }
+  .footer__logo {
+    width: 1218.88px;
+    margin: auto;
+    padding-left: 81.12px;
+  }
+  .footer__nav {
+    width: 1218.88px;
+    margin: auto;
+    padding-left: 81.12px;
+  }
+}
+
+/*# sourceMappingURL=menus.css.map */
