@@ -1,4 +1,4 @@
-@import "utils/reset";
+@import "base/reset";
 @import "utils/extensions";
 @import "utils/functions";
 @import "utils/mixins";
@@ -51,20 +51,12 @@ body, html {
     &__bouton {
         @include bouton;
         margin-bottom: 57px;
-        // position: relative;
-        // z-index: 1;
-        // &::after {
-        //     @include transition;
-        //     background-blend-mode: screen;
-        //     box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.50);
+        position: relative;
         &:hover {
             cursor: pointer;
             background-blend-mode: screen;
             box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.50);
         }
-            // &::after {
-            //     opacity: 1;
-            // }
     }
 }
 
@@ -157,12 +149,21 @@ body, html {
             @include taille_texte(16px, 300);
         }
         &__like {
-            background-color: #f6f6f6;
-            background-blend-mode: multiply;
             position: absolute;
             bottom: 31px;
             right: 24px;
-            font-size: larger;
+            font-size: x-large;
+            &.fa-solid {
+                background: $couleur-degrade;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: opacity 0.4s;
+                &:hover {
+                    opacity: 1;
+                }
+            }
         }
         &__encadre {
             background-color: $couleur-tertiaire;

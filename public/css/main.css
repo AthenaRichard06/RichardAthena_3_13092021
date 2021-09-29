@@ -71,6 +71,7 @@ body, html {
   font-weight: 500;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
   margin-bottom: 57px;
+  position: relative;
 }
 .exploration__bouton:hover {
   cursor: pointer;
@@ -202,12 +203,21 @@ body, html {
   font-weight: 300;
 }
 .restaurants__vignette__like {
-  background-color: #f6f6f6;
-  background-blend-mode: multiply;
   position: absolute;
   bottom: 31px;
   right: 24px;
-  font-size: larger;
+  font-size: x-large;
+}
+.restaurants__vignette__like.fa-solid {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.restaurants__vignette__like.fa-solid:hover {
+  opacity: 1;
 }
 .restaurants__vignette__encadre {
   background-color: #99E2D0;
