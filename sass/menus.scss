@@ -112,71 +112,64 @@ body, html {
         }
     }
     &__plat {
-        display: flex;
+        @include display(row, space-between);
         @include taille(93.07%, 68px);
         @include shadow(0, 0);
         background: $couleur-texte;
         border-radius: 16px;
         margin-top: 12px;
         margin-left: 15px;
-        position: relative;
         @include ellipse;
         &__menu {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-left: 10px;
             @include ellipse;
+            @include display(column, center);
+            margin: 10px;
         }
         &__titre {
             @include taille_texte(17px, 700);
-            margin-bottom: 5px;
             @include ellipse;
+            padding: 3px 0;
         }
         &__description {
             @include taille_texte(15px, 300);
             @include ellipse;
+            padding: 3px 0;
+        }
+        &__info {
+            display: flex;
         }
         &__prix {
             @include taille_texte(16px, 700);
-            display: flex;
-            align-items: flex-end;
-            position: absolute;
-            right: 90px;
-            bottom: 12px;
-            transform: translateX(68px);            
+            align-self: flex-end;
+            margin: 0 25px 10px 0;           
         }
         &__picto {
             @include taille(59px, 68px);
             background: $couleur-tertiaire;
+            color: $couleur-texte;
+            font-size: x-large;
             border-radius: 0 16px 16px 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            position: absolute;
-            right: 0;
             transform: scale(0);
+            width: 0;
+            transition: width 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }
         &__valide {
-            color: $couleur-texte;
-            font-size: x-large;
             transform: rotate(0deg);
             transition: transform 0.5s ease-in-out;
+            padding: 0 20px;
         }
         &:hover {
             cursor: pointer;
         }
-        &:hover &__description {
-            @include ellipse;
-        }
         &:hover &__prix {
-            animation-name: prix;
             animation: prix 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }
         &:hover &__picto {
-            animation-name: validation;
 	        animation: validation 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            width: 100%;
         }
         &:hover &__valide {
             transform: rotate(360deg);
@@ -214,10 +207,22 @@ body, html {
     }
 }
 
+@media screen and (min-width: 500px) {
+    .carte {
+        &__bloc {
+            align-items: center;
+        }
+        &__section {
+            width: 70%;
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .carte {
         &__bloc {
             flex-direction: row;
+            align-items: inherit;
         }
         &__section {
             width: 30%;

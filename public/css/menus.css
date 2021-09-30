@@ -165,6 +165,8 @@ body, html {
 }
 .section__plat {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 93.07%;
   height: 68px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
@@ -172,27 +174,26 @@ body, html {
   border-radius: 16px;
   margin-top: 12px;
   margin-left: 15px;
-  position: relative;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .section__plat__menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
 }
 .section__plat__titre {
   font-size: 17px;
   font-weight: 700;
-  margin-bottom: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 3px 0;
 }
 .section__plat__description {
   font-size: 15px;
@@ -200,51 +201,45 @@ body, html {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 3px 0;
+}
+.section__plat__info {
+  display: flex;
 }
 .section__plat__prix {
   font-size: 16px;
   font-weight: 700;
-  display: flex;
-  align-items: flex-end;
-  position: absolute;
-  right: 90px;
-  bottom: 12px;
-  transform: translateX(68px);
+  align-self: flex-end;
+  margin: 0 25px 10px 0;
 }
 .section__plat__picto {
   width: 59px;
   height: 68px;
   background: #99E2D0;
+  color: white;
+  font-size: x-large;
   border-radius: 0 16px 16px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
   transform: scale(0);
+  width: 0;
+  transition: width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .section__plat__valide {
-  color: white;
-  font-size: x-large;
   transform: rotate(0deg);
   transition: transform 0.5s ease-in-out;
+  padding: 0 20px;
 }
 .section__plat:hover {
   cursor: pointer;
 }
-.section__plat:hover .section__plat__description {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .section__plat:hover .section__plat__prix {
-  animation-name: prix;
   animation: prix 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .section__plat:hover .section__plat__picto {
-  animation-name: validation;
   animation: validation 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  width: 100%;
 }
 .section__plat:hover .section__plat__valide {
   transform: rotate(360deg);
@@ -284,9 +279,18 @@ body, html {
   text-decoration: underline;
 }
 
+@media screen and (min-width: 500px) {
+  .carte__bloc {
+    align-items: center;
+  }
+  .carte__section {
+    width: 70%;
+  }
+}
 @media screen and (min-width: 1024px) {
   .carte__bloc {
     flex-direction: row;
+    align-items: inherit;
   }
   .carte__section {
     width: 30%;
