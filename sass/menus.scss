@@ -238,6 +238,15 @@ body, html {
 }
 
 @media screen and (min-width: 1300px) {
+    .header {
+        &__bloc {
+            @include taille_et_marge (1300px, auto);
+        }
+        &__retour {
+            padding-left: 81.12px;
+        }
+    }
+    
     .carte {
         width: 1300px;
         margin: auto;
