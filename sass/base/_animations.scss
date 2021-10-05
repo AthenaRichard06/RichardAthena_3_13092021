@@ -1,3 +1,19 @@
+@keyframes loader {
+    100% {
+        opacity: 0;
+        z-index: -50;
+    }
+}
+
+@keyframes chargement {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes menu {
     0% {
         opacity: 0;
