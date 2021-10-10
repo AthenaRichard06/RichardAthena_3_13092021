@@ -10,12 +10,124 @@
   background-color: transparent;
 }
 
+@keyframes loader {
+  0% {
+    opacity: 0.9;
+    z-index: 5;
+  }
+  99% {
+    opacity: 0.9;
+    z-index: 5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -50;
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    opacity: 0.9;
+    z-index: 5;
+  }
+  99% {
+    opacity: 0.9;
+    z-index: 5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -50;
+  }
+}
+@keyframes sauter {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+@-webkit-keyframes sauter {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+@keyframes menu {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes menu {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes validation {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes validation {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+@keyframes prix {
+  0% {
+    transform: translateX(68px);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes prix {
+  0% {
+    transform: translateX(68px);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
 body, html {
   font-family: "Roboto", sans-serif;
 }
 
 .chargement {
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   z-index: 5;
   width: 100%;
   height: 100%;
@@ -23,17 +135,32 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: loader 4s forwards;
+  animation: loader 3s both;
+  -webkit-animation: loader 3s both;
 }
-.chargement__couvert {
+.chargement__vin {
   color: #9356DC;
   font-size: 50px;
   padding: 25px;
-  border: 7px solid transparent;
-  border-top: 7px solid #FF79DA;
-  border-bottom: 7px solid #99E2D0;
-  border-radius: 50%;
-  animation: chargement 3s linear infinite;
+  animation: sauter 0.4s alternate cubic-bezier(0.54, 0.01, 1, 0.99) infinite;
+  -webkit-animation: sauter 0.4s alternate cubic-bezier(0.54, 0.01, 1, 0.99) infinite;
+  animation-delay: 0.1s;
+}
+.chargement__couvert {
+  color: #FF79DA;
+  font-size: 50px;
+  padding: 25px;
+  animation: sauter 0.4s alternate cubic-bezier(0.54, 0.01, 1, 0.99) infinite;
+  -webkit-animation: sauter 0.4s alternate cubic-bezier(0.54, 0.01, 1, 0.99) infinite;
+  animation-delay: 0.2s;
+}
+.chargement__cookie {
+  color: #99E2D0;
+  font-size: 50px;
+  padding: 25px;
+  animation: sauter 0.4s alternate cubic-bezier(0.54, 0.01, 1, 0.99) infinite;
+  -webkit-animation: sauter alternate 0.4s cubic-bezier(0.54, 0.01, 1, 0.99) infinite;
+  animation-delay: 0.3s;
 }
 
 .header {
@@ -86,7 +213,7 @@ body, html {
 .exploration__bouton {
   color: white;
   background-color: #282828;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   border-radius: 25px;
   padding: 16px 22px;
   font-size: 16px;
@@ -231,7 +358,7 @@ body, html {
   font-size: x-large;
 }
 .restaurants__vignette__like.fa-solid {
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;

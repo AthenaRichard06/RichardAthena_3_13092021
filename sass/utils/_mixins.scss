@@ -67,4 +67,5 @@
 
 @mixin animation ($nom, $duree, $transition, $fill-mode) {
     animation: $nom $duree $transition $fill-mode;
+    -webkit-animation: $nom $duree $transition $fill-mode;
 }

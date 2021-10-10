@@ -10,7 +10,61 @@
   background-color: transparent;
 }
 
+@keyframes loader {
+  0% {
+    opacity: 0.9;
+    z-index: 5;
+  }
+  99% {
+    opacity: 0.9;
+    z-index: 5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -50;
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    opacity: 0.9;
+    z-index: 5;
+  }
+  99% {
+    opacity: 0.9;
+    z-index: 5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -50;
+  }
+}
+@keyframes tourner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes tourner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes menu {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes menu {
   0% {
     opacity: 0;
     transform: translateY(50px);
@@ -32,7 +86,31 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes validation {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
 @keyframes prix {
+  0% {
+    transform: translateX(68px);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes prix {
   0% {
     transform: translateX(68px);
     transform-origin: 100% 100%;
@@ -100,7 +178,7 @@ body, html {
   font-size: x-large;
 }
 .carte__like.fa-solid {
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -109,6 +187,7 @@ body, html {
 }
 .carte__like.fa-solid:hover {
   opacity: 1;
+  cursor: pointer;
 }
 .carte__bloc {
   display: flex;
@@ -131,7 +210,7 @@ body, html {
 .bouton {
   color: white;
   background-color: #282828;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   border-radius: 25px;
   padding: 16px 22px;
   font-size: 16px;
@@ -177,6 +256,7 @@ body, html {
   overflow: hidden;
   text-overflow: ellipsis;
   animation: menu 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: menu 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .section__plat--1 {
   animation-delay: 0.2s;
@@ -247,9 +327,11 @@ body, html {
 }
 .section__plat:hover .section__plat__prix {
   animation: prix 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: prix 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .section__plat:hover .section__plat__picto {
   animation: validation 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: validation 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   width: 100%;
 }
 .section__plat:hover .section__plat__valide {

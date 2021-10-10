@@ -1,20 +1,63 @@
 @keyframes loader {
+    0% {
+        opacity: 0.9;
+        z-index: 5;
+    }
+    99% {
+        opacity: 0.9;
+        z-index: 5;
+    }    
     100% {
         opacity: 0;
         z-index: -50;
     }
 }
 
-@keyframes chargement {
+@-webkit-keyframes loader {
     0% {
-        transform: rotate(0deg);
+        opacity: 0.9;
+        z-index: 5;
+    }
+    99% {
+        opacity: 0.9;
+        z-index: 5;
+    }    
+    100% {
+        opacity: 0;
+        z-index: -50;
+    }
+}
+
+@keyframes sauter {
+    0% {
+        transform: translateY(0);
     }
     100% {
-        transform: rotate(360deg);
+        transform: translateY(50px);
+    }
+}
+
+@-webkit-keyframes sauter {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(50px);
     }
 }
 
 @keyframes menu {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes menu {
     0% {
         opacity: 0;
         transform: translateY(50px);
@@ -38,6 +81,19 @@
     }
 }
 
+@-webkit-keyframes validation {
+    0% {
+        transform: scaleX(0);
+        transform-origin: 100% 100%;
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(1);
+        transform-origin: 100% 100%;
+        opacity: 1;
+    }
+}
+
 @keyframes prix {
     0% {
         transform: translateX(68px);
@@ -49,4 +105,17 @@
         transform-origin: 100% 100%;
         opacity: 1;
     }
- }
+}
+
+@-webkit-keyframes prix {
+    0% {
+        transform: translateX(68px);
+        transform-origin: 100% 100%;
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        transform-origin: 100% 100%;
+        opacity: 1;
+    }
+}

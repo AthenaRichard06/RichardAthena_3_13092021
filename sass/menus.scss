@@ -67,6 +67,7 @@ body, html {
             transition: opacity 0.4s;
             &:hover {
                 opacity: 1;
+                cursor: pointer;
             }
         }
     }
