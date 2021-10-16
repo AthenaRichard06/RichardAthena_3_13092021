@@ -1,9 +1,5 @@
 @keyframes loader {
-    0% {
-        opacity: 0.9;
-        z-index: 5;
-    }
-    99% {
+    0%, 99% {
         opacity: 0.9;
         z-index: 5;
     }    

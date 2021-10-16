@@ -121,7 +121,6 @@ body, html {
         margin-top: 12px;
         margin-left: 15px;
         transform: translateY(-50px);
-        @include ellipse;
         @include animation (menu, $duree-menu, cubic-bezier(0.250, 0.460, 0.450, 0.940), both);
         @for $i from 1 through 4 {
             &--#{$i} {
@@ -139,7 +138,7 @@ body, html {
             padding: 3px 0;
         }
         &__description {
-            @include taille_texte(15px, 300);
+            @include taille_texte(14.5px, 300);
             @include ellipse;
             padding: 3px 0;
         }
@@ -152,7 +151,7 @@ body, html {
             margin: 0 25px 10px 0;           
         }
         &__picto {
-            @include taille(59px, 68px);
+            @include taille(59px, 100%);
             background: $couleur-tertiaire;
             color: $couleur-texte;
             font-size: x-large;
@@ -210,6 +209,32 @@ body, html {
         &:hover {
             cursor: pointer;
             text-decoration: underline;
+        }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .section {
+        &__plat {
+            height: fit-content;
+            &__menu {
+                white-space: normal;
+                &:hover {
+                    @include ellipse;
+                }
+            }
+            &__titre {
+                white-space: normal;
+                &:hover {
+                    @include ellipse;
+                }
+            }
+            &__description {
+                white-space: normal;
+                &:hover {
+                    @include ellipse;
+                }
+            }
         }
     }
 }
