@@ -394,7 +394,7 @@ body, html {
     text-overflow: ellipsis;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 524px) {
   .carte__bloc {
     align-items: center;
   }
